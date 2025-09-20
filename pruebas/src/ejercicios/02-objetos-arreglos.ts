@@ -12,6 +12,6 @@ const persona: PersonaInterface = {
     
 }
 
-console.log(persona)
+/* console.log(persona) */
 
 export {}

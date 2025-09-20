@@ -8,6 +8,6 @@ const edad: number = 3;
 
 
 
-console.log(nombre, edad);
+/* console.log(nombre, edad); */
 
 export {}
