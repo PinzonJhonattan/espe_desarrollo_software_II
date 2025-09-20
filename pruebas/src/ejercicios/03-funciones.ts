@@ -50,7 +50,7 @@ interface Usuario {
         ciudad: string;
         pais: string;
     } 
-    saludar: () => void;
+    saludar: () => string;
     actualizarEmail: (nuevoEmail:string) => void;
 }
 
