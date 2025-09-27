@@ -1,0 +1,22 @@
+h1{
+    color: red;
+}
+
+h2{
+    color: blue;
+}
+
+button{
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+}
