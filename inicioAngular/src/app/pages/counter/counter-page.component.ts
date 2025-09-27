@@ -6,6 +6,7 @@ import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
+
 export class CounterPageComponent {
     counter:number = 0;
     counterSignal = signal(0);

@@ -1,24 +1,29 @@
-import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
+import { UpperCasePipe } from "@angular/common";
+import { ChangeDetectionStrategy, Component, computed, signal } from "@angular/core";   
+
 
 @Component({
     templateUrl: './car.component.html',
-        styleUrls: ['./car.component.css'],
+    styleUrls: ['./car.component.css'],
+    imports: [UpperCasePipe],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CarComponent {
 
     brand = signal('Renault');
-    student = 'jhonattan'
+    student = signal('jhonattan')
     year = signal(2020);
+    getCarDescription = computed(() => `${this.brand()} - ${this.year()}`); //señal computada
+    capitalizeStudent = computed(() => this.student().toUpperCase());  //señales computada
 
     constructor() {
     }
 
-    getCarDescription() {
-        return `${this.brand()} - ${this.year()}`;  
-    }
-
+        /* getCarDescription() {
+            return `${this.brand()} - ${this.year()}`;  
+        }
+ */
     changeCar() {
         this.brand.set('Kia');
         this.year.set(2021);
@@ -33,7 +38,4 @@ export class CarComponent {
         this.year.update(() => 2025);
     }
 
-    changeNameStudent() {
-        this.student = this.student.toUpperCase();  
-    }
 }

@@ -1,0 +1,22 @@
+<h3>{{ listName() }}</h3>   
+
+        <ul class="list-group">
+            @for (character of characters(); track character.id; let idx = $index) {
+                @if(character.power > 5000){        
+                <li>
+                    <span> {{ idx + 1 }} - {{ character.name }}: </span>
+                    <span 
+                    [class.text-danger]="character.power > 9000"
+                    [class.text-success]="character.power < 9000"
+                    >{{ character.power }}</span>
+                    <span   
+                   
+                    >{{ character.power }}</span>
+                </li>
+              }@else{
+                <li>
+                    <span class="text-success">personajes con poder bajo</span>
+                </li>
+              }
+            }
+        </ul>
